@@ -19,21 +19,37 @@ const moonbitGrammar = JSON.parse(
 export default defineConfig({
   integrations: [
     starlight({
-      title: 'llvm.mbt文档与教程',
+      title: 'Token 2 Tensor',
       customCss: [
         './src/tailwind.css',
       ],
       social: {
-        github: 'https://github.com/Kaida-Amethyst/CCompilerNotes',
+        github: 'https://github.com/moonbitlang/MiniMoonBit2025',
       },
       sidebar: [
         {
-          label: 'Introduction',
-          items: [
-            {
-              label: 'Introduction',
-              link: '/introduction/introduction/'
-            }]
+          label: 'Chapter 1: 概述',
+          autogenerate: {
+            directory: 'Chapter1',
+          },
+        }, 
+        {
+          label: 'Chapter 2: MoonBit 与 MiniMoonBit',
+          autogenerate: {
+            directory: 'Chapter2',
+          },
+        }, 
+        {
+          label: 'Chapter 3: 编译原理',
+          autogenerate: {
+            directory: 'Chapter3',
+          },
+        }, 
+        {
+          label: 'Chapter 4: 词法分析',
+          autogenerate: {
+            directory: 'Chapter4',
+          },
         }, 
         {
           label: 'Turtorial',

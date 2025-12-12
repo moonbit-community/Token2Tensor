@@ -69,7 +69,7 @@
       "patterns": [
         {
           "name": "keyword.control.moonbit",
-          "match": "\\b(if|else|match|while|for|break|continue|return|try|catch|finally)\\b"
+          "match": "\\b(if|else|match|while|for|break|continue|return|try|catch|loop|lexmatch|with|guard|is)\\b"
         },
         {
           "name": "keyword.declaration.moonbit",
@@ -81,7 +81,7 @@
         },
         {
           "name": "constant.language.moonbit",
-          "match": "\\b(true|false|None|Some)\\b"
+          "match": "\\b(true|false|)\\b"
         }
       ]
     },
@@ -101,7 +101,7 @@
         },
         {
           "name": "storage.type.moonbit",
-          "match": "\\b(Int|String|Bool|Double|Char|Array|Option|Result)\\b"
+          "match": "\\b(Int|String|Some|None|Bool|Double|Char|Array|Option|Result)\\b"
         }
       ]
     },
