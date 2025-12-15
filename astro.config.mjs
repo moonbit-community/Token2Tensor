@@ -28,35 +28,11 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: 'Chapter 1: 概述',
+          label: 'Token 2 Tensor',
           autogenerate: {
-            directory: 'Chapter1',
+            directory: 'Chapters',
           },
         }, 
-        {
-          label: 'Chapter 2: MoonBit 与 MiniMoonBit',
-          autogenerate: {
-            directory: 'Chapter2',
-          },
-        }, 
-        {
-          label: 'Chapter 3: 编译原理',
-          autogenerate: {
-            directory: 'Chapter3',
-          },
-        }, 
-        {
-          label: 'Chapter 4: 词法分析',
-          autogenerate: {
-            directory: 'Chapter4',
-          },
-        }, 
-        {
-          label: 'Turtorial',
-          autogenerate: {
-            directory: 'Tutorial',
-          },
-        },
       ]
   }),
   tailwind({
