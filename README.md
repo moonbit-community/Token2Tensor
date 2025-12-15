@@ -1,3 +1,3 @@
-# llvm.mbt
+# From Token to Tensor
 
-https://github.com/moonbitlang/llvm.mbt
+Build Your Own Functional Programming Language, which has ability to run a functional Nerual Network, from scratch.
