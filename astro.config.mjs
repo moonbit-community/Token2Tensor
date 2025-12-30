@@ -15,8 +15,19 @@ const moonbitGrammar = JSON.parse(
   fs.readFileSync(join(__dirname, 'src/moonbit-grammar.json'), 'utf-8')
 );
 
+// 根据环境区分本地开发和生产（GitHub Pages）配置
+const isProd = process.env.NODE_ENV === 'production';
+
 // https://astro.build/config
 export default defineConfig({
+  // 生产环境：GitHub Pages -> https://moonbit-community.github.io/Token2Tensor/
+  // 开发环境：本地 dev -> http://localhost:4321/
+  site: isProd
+    ? 'https://moonbit-community.github.io'
+    : 'http://localhost:4321',
+  base: isProd ? '/Token2Tensor' : '/',
+  output: 'static',
+
   integrations: [
     starlight({
       title: 'Token 2 Tensor',
@@ -34,10 +45,10 @@ export default defineConfig({
           },
         }, 
       ]
-  }),
-  tailwind({
-    applyBaseStyles: false,
-  }),
+    }),
+    tailwind({
+      applyBaseStyles: false,
+    }),
   ],
   markdown: {
     remarkPlugins: [remarkMath],
