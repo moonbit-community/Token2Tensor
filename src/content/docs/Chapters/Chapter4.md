@@ -1,5 +1,8 @@
 ---
 title: Chapter 4. 词法分析
+sidebar:
+  label: Chapter 4. 词法分析
+  order: 4
 ---
 
 MiniMoonBit 编译器真正“接触”源代码的第一个环节，就是**词法分析**。

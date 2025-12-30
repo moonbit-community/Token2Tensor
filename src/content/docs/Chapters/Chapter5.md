@@ -1,5 +1,8 @@
 ---
 title: Chapter 5. 语法分析 - 概念介绍与类型解析
+sidebar:
+  label: Chapter 5. 语法分析 - 概念介绍与类型解析
+  order: 5
 ---
 
 本章，我们终于要正式踏入 **语法分析（parsing）**  的世界。

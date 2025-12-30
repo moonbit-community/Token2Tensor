@@ -1,5 +1,8 @@
 ---
 title: Chapter 6. 语法分析 - 简单表达式
+sidebar:
+  label: Chapter 6. 语法分析 - 简单表达式
+  order: 6
 ---
 
 在前一章中，我们已经为 MiniMoonBit 构建了一个能解析 **类型（Type）**  的语法分析器。本章要跨过表达式解析这一座真正的“高山”——在绝大多数语言里，**表达式（expression）部分往往是语法分析中最棘手的部分**：

@@ -1,5 +1,8 @@
 ---
 title: Chapter 2. MoonBit 与 MiniMoonBit
+sidebar:
+  label: Chapter 2. MoonBit 与 MiniMoonBit
+  order: 2
 ---
 
 ## MoonBit 与 MiniMoonBit

@@ -1,5 +1,8 @@
 ---
 title: Chapter 8. 语法分析 - 顶层语法结构
+sidebar:
+  label: Chapter 8. 语法分析 - 顶层语法结构
+  order: 8
 ---
 
 到目前为止，我们已经为 MiniMoonBit 构建了从 Token 到表达式、语句的完整前端框架：

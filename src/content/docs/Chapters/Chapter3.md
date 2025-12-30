@@ -1,5 +1,8 @@
 ---
 title: Chapter 3. 编译原理
+sidebar:
+  label: Chapter 3. 编译原理
+  order: 3
 ---
 
 这一章，我们会退一步，从“写代码”这件事本身，回到一个更加基础的问题：

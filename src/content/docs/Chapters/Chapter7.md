@@ -1,5 +1,8 @@
 ---
 title: Chapter 7. 语法分析 - 语句与复杂表达式
+sidebar:
+  label: Chapter 7. 语法分析 - 语句与复杂表达式
+  order: 7
 ---
 
 在第 5、6 章中，我们已经为 MiniMoonBit 建起了语法分析的“骨架”：
