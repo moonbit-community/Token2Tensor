@@ -15,18 +15,27 @@ const moonbitGrammar = JSON.parse(
   fs.readFileSync(join(__dirname, 'src/moonbit-grammar.json'), 'utf-8')
 );
 
-// 根据环境区分本地开发和生产（GitHub Pages）配置
+// 根据环境区分本地开发、GitHub Pages 和 Vercel 的配置
 const isProd = process.env.NODE_ENV === 'production';
+const isVercel = !!process.env.VERCEL;
 
 // https://astro.build/config
 export default defineConfig({
-  // 生产环境：GitHub Pages -> https://moonbit-community.github.io/Token2Tensor/
   // 开发环境：本地 dev -> http://localhost:4321/
-  // 注意：site 在生产环境需要包含 base 路径，方便生成绝对链接
-  site: isProd
-    ? 'https://moonbit-community.github.io/Token2Tensor'
-    : 'http://localhost:4321',
-  base: isProd ? '/Token2Tensor' : '/',
+  // 生产环境：
+  //   - GitHub Pages -> https://moonbit-community.github.io/Token2Tensor/ （有 base 前缀）
+  //   - Vercel       -> https://token2tensor.ziyue.cafe/                 （无 base 前缀）
+  // 注意：在 GitHub Pages 上，为了生成正确的绝对链接，site 需要包含 base 路径
+  site: !isProd
+    ? 'http://localhost:4321'
+    : isVercel
+      ? 'https://token2tensor.ziyue.cafe'
+      : 'https://moonbit-community.github.io/Token2Tensor',
+  base: !isProd
+    ? '/'
+    : isVercel
+      ? '/'
+      : '/Token2Tensor',
   output: 'static',
 
   integrations: [
