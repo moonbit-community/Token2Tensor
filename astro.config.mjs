@@ -31,7 +31,7 @@ export default defineConfig({
 
   integrations: [
     starlight({
-      title: 'Token 2 Tensor',
+      title: 'Build Your Own MoonBit Compier',
       customCss: [
         './src/tailwind.css',
       ],
@@ -40,7 +40,7 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: 'Token 2 Tensor',
+          label: 'Build Your Own MoonBit Compiler',
           autogenerate: {
             directory: 'Chapters',
           },
