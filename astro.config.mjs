@@ -22,8 +22,9 @@ const isProd = process.env.NODE_ENV === 'production';
 export default defineConfig({
   // 生产环境：GitHub Pages -> https://moonbit-community.github.io/Token2Tensor/
   // 开发环境：本地 dev -> http://localhost:4321/
+  // 注意：site 在生产环境需要包含 base 路径，方便生成绝对链接
   site: isProd
-    ? 'https://moonbit-community.github.io'
+    ? 'https://moonbit-community.github.io/Token2Tensor'
     : 'http://localhost:4321',
   base: isProd ? '/Token2Tensor' : '/',
   output: 'static',
