@@ -56,12 +56,20 @@
     "numbers": {
       "patterns": [
         {
-          "name": "constant.numeric.moonbit",
-          "match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b"
+          "name": "constant.numeric.binary.moonbit",
+          "match": "\\b0b[01_]+[Uu]?(?:[Ll]|L|N)?\\b"
+        },
+        {
+          "name": "constant.numeric.octal.moonbit",
+          "match": "\\b0o[0-7_]+[Uu]?(?:[Ll]|L|N)?\\b"
         },
         {
           "name": "constant.numeric.hex.moonbit",
-          "match": "\\b0[xX][0-9a-fA-F]+\\b"
+          "match": "\\b0[xX][0-9a-fA-F_]+[Uu]?(?:[Ll]|L|N)?\\b"
+        },
+        {
+          "name": "constant.numeric.decimal.moonbit",
+          "match": "\\b\\d[\\d_]*(?:\\.[0-9_]+)?(?:[eE][+-]?[0-9_]+)?[Uu]?(?:[Ll]|L|N)?\\b"
         }
       ]
     },
@@ -69,19 +77,19 @@
       "patterns": [
         {
           "name": "keyword.control.moonbit",
-          "match": "\\b(if|else|match|while|for|break|continue|return|try|catch|loop|lexmatch|with|guard|is)\\b"
+          "match": "\\b(if|else|match|while|for|break|continue|return|try|catch|loop|lexmatch|with|guard|is|in|raise)\\b"
         },
         {
           "name": "keyword.declaration.moonbit",
-          "match": "\\b(fn|let|var|const|type|struct|enum|trait|impl)\\b"
+          "match": "\\b(fn|fnalias|let|letrec|const|type|typealias|struct|enum|trait|traitalias|impl|extern)\\b"
         },
         {
           "name": "keyword.other.moonbit",
-          "match": "\\b(pub|priv|mut|test|init)\\b"
+          "match": "\\b(pub|priv|mut|test|derive|suberror|noraise|as|async|_)\\b"
         },
         {
           "name": "constant.language.moonbit",
-          "match": "\\b(true|false|)\\b"
+          "match": "\\b(true|false|None|Some|Ok|Err)\\b"
         }
       ]
     },
@@ -101,7 +109,7 @@
         },
         {
           "name": "storage.type.moonbit",
-          "match": "\\b(Int|String|Some|None|Bool|Double|Char|Array|Option|Result)\\b"
+          "match": "\\b(Unit|Bool|Int|Int64|UInt|UInt64|Double|Float|String|Char|Byte|Bytes|Array|FixedArray|Map|Ref|Option|Result|BigInt|Show|Default|Eq|Compare|Hash|Error|Self)\\b"
         }
       ]
     },
@@ -109,11 +117,11 @@
       "patterns": [
         {
           "name": "keyword.operator.moonbit",
-          "match": "[+\\-*/=<>!&|^%]+"
+          "match": "=>|->|~|\\.\\.\\.|\\.\\.|::|=|\\?|!=|[<>]=?|&&|\\|\\||!|>>|<<|[+\\-*/%]=?|[&|]"
         },
         {
           "name": "keyword.operator.assignment.moonbit",
-          "match": "(:=|->|=>|\\|>)"
+          "match": ":=|\\|>"
         }
       ]
     }
